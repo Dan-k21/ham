@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = +prompt('Nhập số: ');
+    function soNguyenTo(string) {
+        if (string === 1) {
+            return false;
+        } else if (string === 2) {
+            return true;
+        } else {
+            for(let i = 2; i < string; i++) {
+                if(string % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    alert(soNguyenTo(string));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('Nhập mảng: ');
+    let arr = string.split('');
+    let count = 0;
+
+    function soLuong() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                count++
+            }
+        }
+        return count;
+    }
+    alert(`Có ${soLuong(arr)} phần tử lẻ trong mảng`);
+</script>
+</body>
+</html>

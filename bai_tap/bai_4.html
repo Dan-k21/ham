@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('Nhập mảng: ');
+    let arr = string.split('');
+    let sum = 0;
+    let count = 0;
+    function tinhTongSoLe(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                sum += +arr[i]
+            }
+        }
+        return sum;
+    }
+    function soLuong(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                count++
+            }
+        }
+        return count;
+    }
+    function tinhTrungBinh(arr) {
+        let tb = tinhTongSoLe(arr)/soLuong(arr);
+        return tb;
+    }
+    alert(tinhTrungBinh(arr));
+</script>
+</body>
+</html>

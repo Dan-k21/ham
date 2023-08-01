@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('Nhập mảng: ');
+    let arr = string.split('');
+    let count = 0;
+
+    function soNguyenTo(string) {
+        if (string === 1) {
+            return false;
+        } else if (string === 2) {
+            return true;
+        } else {
+            for (let j = 2; j < string; j++) {
+                if (string % j === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    function soLuong(arr) {
+        for (let i = 1; i < arr.length; i++) {
+            let check = soNguyenTo(arr[i])
+            if (check) {
+                count++
+            }
+        }
+        return count;
+    }
+    alert(soLuong(arr))
+</script>
+</body>
+</html>

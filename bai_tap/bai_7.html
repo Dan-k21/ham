@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('Nhập mảng: ');
+
+    function array(string) {
+        let arr = string.split('');
+        return arr;
+    }
+
+    function max(arr) {
+        array(string);
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        let viTri = timViTri(arr);
+        alert(viTri);
+    }
+
+    function timViTri(arr) {
+        let viTri = arr.indexOf(max);
+        return viTri;
+    }
+    max(arr)
+
+</script>
+</body>
+</html>
