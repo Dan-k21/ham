@@ -6,29 +6,34 @@
 </head>
 <body>
 <script>
-    let a = prompt('Nhập a:');
-    let b = prompt('Nhập b:');
-    let count = 0;
+    let a = +prompt('Nhập a:');
+    let b = +prompt('Nhập b:');
+
     function soNguyenTo(string) {
-        if (string === 1) {
+        if (string === 1 && string !== 0) {
             return false;
         } else if (string === 2) {
             return true;
         } else {
-            for(let i = 2; i < string; i++) {
-                if(string % i === 0) {
+            for (let i = 2; i < string; i++) {
+                if (string % i === 0) {
                     return false;
                 }
             }
             return true;
         }
     }
-    function demSo() {
-        for (let i = a; i <= b; i++) {
 
+    function demSo(a, b) {
+        for (let i = a; i <= b; i++) {
+            let check = soNguyenTo(i)
+            if (check) {
+                console.log(i)
+            }
         }
     }
 
+    demSo(a, b)
 </script>
 </body>
 </html>
